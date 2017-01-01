@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Waitstaff Calculator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">			
+	<link rel="stylesheet" type="text/css" href="main.css">
+    <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>	
+</head>
+<body ng-controller=>
+	<h1 class="text-center">Waitstaff Calculator</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">				
+				<section class="meal-details">
+					<h2 class="text-center">Enter Meal Details</h2>			
+					<table>
+						<tr>
+							<td class="text-right">Meal Base Price: $</td>
+							<td><input type="number" name="" placeholder="$0.00" ng-model="mealBase" ></td>
+						</tr>
+						<tr>
+							<td class="text-right">Tax Rate: %</td>
+							<td><input type="number" name="" size="5" placeholder="0%" ng-model="taxRate"></td>
+						</tr>
+						<tr>
+							<td class="text-right">Tip Percentage: %</td>
+							<td><input type="number" name="" size="5" placeholder="0%" ng-model="tipPercentage"></td>
+						</tr>
+					</table>
+					<div align="center" class="meal-buttons">						
+						<button>Submit</button>
+						<button>Cancel</button>
+					</div>
+				</section>
+			</div>
+
+			<div class="col-sm-6">				
+				<section>
+					<h2>Customer Charges</h2>
+					<table>
+						<tr>
+							<td class="text-right">Subtotal</td>
+							<td>{{mealBase + mealBase*taxRate| currency}}</td>
+						</tr>
+						<tr>
+							<td class="text-right">Tip</td>
+							<td>{{tipPercentage | currency}}</td>
+						</tr>
+						<tr>
+							<td class="text-right">Total</td>
+							<td>{{tipPercentage + mealBase | currency}}</td>
+						</tr>
+					</table>
+				</section>
+				<br>
+
+				<section>
+					<h2>My Earnings Info</h2>
+					<table>
+						<tr>
+							<td>Tip Total:</td>
+							<td>{{mealBase}}</td>
+						</tr>
+						<tr>
+							<td>Meal Count:</td>
+							<td>{{mealBase}}</td>
+						</tr>
+						<tr>
+							<td>Average Tip Per Meal:</td>
+							<td>{{mealBase}}</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+		<button class="cen">Reset</button>	
+		</div>
+	</div>
+
+</body>
+</html>

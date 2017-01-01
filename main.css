@@ -1,0 +1,31 @@
+* {
+	font-family: "Open Sans";
+}
+
+section {
+	max-width: 500px;
+	border: 1px solid black;
+}
+
+section h2 {
+	border-bottom: 1px solid black;
+	padding-bottom: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+
+table {
+	margin: 0px auto;
+	float: none;
+	padding: 20px;
+}
+
+table td {
+	padding: 5px;
+}
+
+.meal-buttons {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
